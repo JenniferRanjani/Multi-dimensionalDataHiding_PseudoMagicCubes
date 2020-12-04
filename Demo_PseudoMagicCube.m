@@ -24,10 +24,7 @@ seed = randi(2^32)-1;
 %Sample secret message generated using random numbers between 1 and N^3
 ssz=floor(sqrt(row*col/3));
 sz=(ssz*ssz);
-msg = randi([1 N^3],1,sz);
-%-----------------------------NOTE----------------------------------
-%Add 1 to your secret message if its range is between 0 and N^3 - 1
-%-------------------------------------------------------------------
+msg = randi([0 N^3-1],1,sz);
 
 %Embedding Phase
 steg = embed_mc(I, msg, N, seed,rx,ry,rz);
