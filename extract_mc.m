@@ -17,9 +17,9 @@ for x = 1: sz
     
     a = mod(i+rx-j-ry+k+rz-1,N);
     b = mod(i+rx-j-ry-k-rz,N);
-    col = mod(i+rx+j+ry+k+rz-2,N);
+    c = mod(i+rx+j+ry+k+rz-2,N);
             
-    G=a*N^2 + b*N+ col+1 ;
+    G=a*N^2 + b*N+ c ;
     
     recover(x) = G;
     
